@@ -1,0 +1,239 @@
+<?xml version="1.0" ?>
+<robot name="my_amr" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find my_amr_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find my_amr_description)/urdf/my_amr.trans" />
+<xacro:include filename="$(find my_amr_description)/urdf/my_amr.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="0.0011441654834987553 0.003063642546493052 0.14460839549939128" rpy="0 0 0"/>
+    <mass value="69.15228989184162"/>
+    <inertia ixx="0.660972" iyy="0.702314" izz="0.340561" ixy="9e-06" iyz="0.000547" ixz="-0.009543"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://my_amr_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://my_amr_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="top_1">
+  <inertial>
+    <origin xyz="-0.10227028847511865 -0.00312933270363939 0.041653403465186756" rpy="0 0 0"/>
+    <mass value="4.647860194698938"/>
+    <inertia ixx="0.010075" iyy="0.012341" izz="0.022106" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.104541 -0.006259 -0.296693" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://my_amr_description/meshes/top_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.104541 -0.006259 -0.296693" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://my_amr_description/meshes/top_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="lidar_1">
+  <inertial>
+    <origin xyz="0.055310502750731315 -0.0030822384979997328 0.005259563732281147" rpy="0 0 0"/>
+    <mass value="1.339299707757657"/>
+    <inertia ixx="0.000619" iyy="0.000967" izz="0.001105" ixy="-1e-06" iyz="3e-06" ixz="-0.000159"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.0 -0.009421 -0.31" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://my_amr_description/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.0 -0.009421 -0.31" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://my_amr_description/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_tyre_1">
+  <inertial>
+    <origin xyz="-2.884751206526544e-07 1.2691791521912688e-07 4.0346518798833886e-07" rpy="0 0 0"/>
+    <mass value="1.8977026043458158"/>
+    <inertia ixx="0.001177" iyy="0.001849" izz="0.001177" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.002271 0.105473 -0.038346" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://my_amr_description/meshes/right_tyre_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.002271 0.105473 -0.038346" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://my_amr_description/meshes/right_tyre_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_tyre_1">
+  <inertial>
+    <origin xyz="-2.8847512004810325e-07 2.076748055329647e-07 4.034651876136386e-07" rpy="0 0 0"/>
+    <mass value="1.897702604345816"/>
+    <inertia ixx="0.001177" iyy="0.001849" izz="0.001177" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.002271 -0.111732 -0.038346" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://my_amr_description/meshes/left_tyre_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.002271 -0.111732 -0.038346" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://my_amr_description/meshes/left_tyre_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Component7_1">
+  <inertial>
+    <origin xyz="4.792175202356086e-07 -3.3270363962011745e-07 4.0346518761450595e-07" rpy="0 0 0"/>
+    <mass value="0.07224176082733826"/>
+    <inertia ixx="5e-06" iyy="5e-06" izz="5e-06" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.118194 -0.00313 -0.007646" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://my_amr_description/meshes/Component7_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.118194 -0.00313 -0.007646" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://my_amr_description/meshes/Component7_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Rigid 4" type="fixed">
+  <origin xyz="0.104541 0.006259 0.296693" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="top_1"/>
+</joint>
+
+<joint name="Rigid 7" type="fixed">
+  <origin xyz="-0.00 0.009421 0.31" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="lidar_1"/>
+</joint>
+
+
+<joint name="right_joint" type="continuous">
+  <origin xyz="0.002271 -0.105473 0.038346" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="right_tyre_1"/>
+  <axis xyz="-0.0 1.0 0.0"/>
+</joint>
+
+<joint name="left_joint" type="continuous">
+  <origin xyz="0.002271 0.111732 0.038346" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="left_tyre_1"/>
+  <axis xyz="0.0 1.0 -0.0"/>
+</joint>
+
+<joint name="Ball 10" type="fixed">
+  <origin xyz="-0.118194 0.00313 0.007646" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="Component7_1"/>
+</joint>
+
+
+<!-- <gazebo>
+<plugin name="JointStatePublisher" filename="libJointStatePublisher.so">
+    <joints>left_joint, right_joint</joints>
+    <publish_selected_only>1</publish_selected_only>
+</plugin>
+</gazebo> -->
+
+
+    <gazebo>
+        <plugin
+            filename="libgazebo_ros_diff_drive.so"
+            name="DiffDrive">
+            <left_joint>left_joint</left_joint>
+            <right_joint>right_joint</right_joint>
+            <wheel_separation>0.194</wheel_separation>
+            <wheel_diameter>0.088</wheel_diameter>
+            
+            <max_wheel_torque>6.0</max_wheel_torque>
+            <max_wheel_acceleration>1.0</max_wheel_acceleration>
+      
+            <!-- odometry  --> 
+            <odometry_source>1</odometry_source>
+            <odometry_frame>odom</odometry_frame>
+            <robot_base_frame>base_link</robot_base_frame>
+      
+            <!-- topic & re remappings -->
+            <ros>
+              <namespace>/</namespace>
+              <remapping>/cmd_vel:=/cmd_vel</remapping>
+              <remapping>/odom:=/odom</remapping>
+            </ros>
+      
+            <publish_odom>true</publish_odom>
+            <publish_odom_tf>true</publish_odom_tf>
+            <publish_wheel_tf>true</publish_wheel_tf>
+            <!-- <publishWheelJointState>true</publishWheelJointState> -->
+
+            <!-- Set to true to swap right and left wheels, defaults to true -->
+            <legacyMode>false</legacyMode>
+            <update_rate>100.0</update_rate>
+        </plugin>
+    </gazebo>
+
+
+    <gazebo reference="lidar_1">
+        <sensor name="laser" type="ray">
+            <pose> 0 0 0 0 0 0 </pose>
+            <visualize>0</visualize>
+            <update_rate>30</update_rate>
+            <ray>
+                <scan>
+                    <horizontal>
+                        <samples>720</samples>
+                        <min_angle>-3.14</min_angle>
+                        <max_angle>3.14</max_angle>
+                    </horizontal>
+                </scan>
+                <range>
+                    <min>0.11</min>
+                    <max>8</max>
+                </range>
+            </ray>
+            <plugin name="laser_controller" filename="libgazebo_ros_ray_sensor.so">
+                <ros>
+                    <remapping>~/out:=scan</remapping>
+                </ros>
+                <output_type>sensor_msgs/LaserScan</output_type>
+                <frame_name>lidar_1</frame_name>
+            </plugin>
+        </sensor>
+    </gazebo>
+
+</robot>
