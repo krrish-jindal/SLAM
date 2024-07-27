@@ -100,8 +100,8 @@ def generate_launch_description():
         executable='static_transform_publisher',
         arguments=[
             '0.0', '0.0', '0.0',
-            '0.0', '0', '2.09', # No rotation for static transform
-            'map', 'world'
+            '0.0', '0', '0', # No rotation for static transform
+            'odom', 'map'
         ],
         output='screen'
     )
@@ -116,6 +116,6 @@ def generate_launch_description():
   ld.add_action(start_robot_state_publisher_cmd)
   # ld.add_action(start_joint_state_publisher_cmd)
   ld.add_action(start_rviz_cmd)
-  # ld.add_action(static_tf_publisher_cmd)
+  ld.add_action(static_tf_publisher_cmd)
  
   return ld
